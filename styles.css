@@ -62,3 +62,9 @@ header {
   font-size: 5em;
   text-align: center;
 }
+
+.screen__block {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
