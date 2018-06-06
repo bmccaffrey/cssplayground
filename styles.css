@@ -69,7 +69,10 @@ header {
   font-size: 5em;
   height: 90vh;
   text-align: center;
+}
 
+.screen--flex {
+  display: flex;
 }
 
 .screen__block {
@@ -87,3 +90,4 @@ header {
 .green {
   background-color: green;
 }
+
