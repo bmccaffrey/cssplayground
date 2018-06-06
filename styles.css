@@ -27,6 +27,7 @@ header {
 
 .styles-menu {
   background-color: #BDBDBD;
+  height: 90vh;
 }
 
 .styles-menu__title{
@@ -52,6 +53,12 @@ header {
   color: cornflowerblue;
 }
 
+.styles-menu__properties-list {
+
+}
+
+.styles-menu__property {}
+
 .hidden {
   display: none;
 }
@@ -60,5 +67,7 @@ header {
   background-color: #F2F2F2;
   color: orange;
   font-size: 5em;
+  height: 90vh;
   text-align: center;
+
 }
