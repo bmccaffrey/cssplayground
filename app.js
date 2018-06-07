@@ -16,6 +16,8 @@ var inputNumber = document.querySelector('input[type="number"]');
 
 // var submitButton = document.querySelector('input[type="submit"]');
 
+var displayFlex = document.getElementById('displayFlex');
+
 subtitle.addEventListener('click', hideNotSubtitle);
 
 function hideNotSubtitle() {
@@ -69,11 +71,5 @@ function pullNumber() {
 
 inputNumber.addEventListener('change', pullNumber);
 
-
-
-
-var displayFlex = flexProperties.firstElementChild.firstElementChild;
-
-// jusst add an eventListener to it
-// if (displayFlex.checked) { console.log(displayFlex); }
+displayFlex.addEventListener('change', function() { display.classList.toggle('display--flex') });
 
