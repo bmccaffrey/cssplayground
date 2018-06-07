@@ -102,5 +102,5 @@ function toggleStyle() {
     propertyValues.forEach(item => item.addEventListener('change', setPropertyValue));
   }
 }
-assignStuff();
+toggleStyle();
 
