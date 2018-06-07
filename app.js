@@ -73,19 +73,7 @@ inputNumber.addEventListener('change', pullNumber);
 
 displayFlex.addEventListener('change', function() { display.classList.toggle('display--flex') });
 
-// radios respond to .checked
-//  function that takes the var.name (flex-direction) 
-var row = document.getElementById('row');
-var reverseRow = document.getElementById('row-reverse');
-var column = document.getElementById('column');
-var reverseColumn = document.getElementById('column-reverse');
 
-function setPropertyValue() {
-  let propVal = `${this.name}: ${this.id};`;
-  //  remember to remove console.log statement later
-  console.log(propVal);
-  display.style.cssText = propVal;
-}
 
 //  Hide Property Value Lists
 var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
@@ -94,13 +82,25 @@ valueLists.forEach(list => list.previousElementSibling
   .addEventListener('click', function() {
     list.classList.toggle('hidden')
   }));
+  
+//  Pull Property Name & Value and Set for Display
+function setPropertyValue() {
+  let propVal = `${this.name}: ${this.id};`;
+  //  remember to remove console.log statement later
+  console.log(propVal);
+  if (display.style.cssText) {
+    display.style.cssText += propVal;
+  } else {
+    display.style.cssText = propVal;
+  }
+}
 
-//  Toggle Style for Every Property Value
+//  Set Style Toggles for Every Property Value
 function toggleStyle() {
   for (let i = 0; i < valueLists.length; i++) {
     let propertyValues = valueLists[i].querySelectorAll('input');
     propertyValues.forEach(item => item.addEventListener('change', setPropertyValue));
   }
 }
-toggleStyle();
 
+toggleStyle();  
