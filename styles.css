@@ -54,10 +54,22 @@ header {
 }
 
 .styles-menu__properties-list {
+  font-size: 16pt;
+  margin: 0;
+}
+.styles-menu__property {}
 
+.styles-menu__property:hover {
+  color: cornflowerblue;
 }
 
-.styles-menu__property {}
+.styles-menu__property-value-list {
+  font-size: 22pt;
+  display: block;
+}
+.label {
+  display: block;
+}
 
 .hidden {
   display: none;
