@@ -63,7 +63,7 @@ header {
   display: none;
 }
 
-.screen {
+.display {
   background-color: #F2F2F2;
   color: orange;
   font-size: 5em;
@@ -71,11 +71,11 @@ header {
   text-align: center;
 }
 
-.screen--flex {
+.display--flex {
   display: flex;
 }
 
-.screen__block {
+.display__block {
   height: 100px;
   width: 100px;
   border: 1px solid black;

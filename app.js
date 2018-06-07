@@ -10,6 +10,8 @@ var flexProperties = flex.nextElementSibling;
 var grid = menuItems[1];;
 var gridProperties = grid.nextElementSibling;
 
+var display = document.querySelector('.display');
+
 subtitle.addEventListener('click', hideNotSubtitle);
 
 function hideNotSubtitle() {
@@ -37,3 +39,8 @@ grid.addEventListener('click', toggleProperties);
 function toggleProperties() {
   this.nextElementSibling.classList.toggle('hidden');
 }
+
+var displayFlex = flexProperties.firstElementChild.firstElementChild;
+// if (displayFlex.checked) {add .flex to screen}
+console.log(displayFlex);
+
