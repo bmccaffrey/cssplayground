@@ -80,23 +80,27 @@ var reverseRow = document.getElementById('row-reverse');
 var column = document.getElementById('column');
 var reverseColumn = document.getElementById('column-reverse');
 
-function propertyValue() {
+function setPropertyValue() {
   let propVal = `${this.name}: ${this.id};`;
+  //  remember to remove console.log statement later
   console.log(propVal);
   display.style.cssText = propVal;
 }
-// probably don't have to define and add eventListeners to all of these manually
-// I could just grab styles-menu__property-value-list and then specify the 
-// input tags on them
-row.addEventListener('change', propertyValue);
-reverseRow.addEventListener('change', propertyValue);
-column.addEventListener('change', propertyValue);
-reverseColumn.addEventListener('change', propertyValue);
 
+//  Hide Property Value Lists
 var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
-// valueLists[0].previousElementSibling.addEventListener('click',function(){ valueLists[0].classList.toggle('hidden')});
 
 valueLists.forEach(list => list.previousElementSibling
   .addEventListener('click', function() {
     list.classList.toggle('hidden')
   }));
+
+//  Toggle Style for Every Property Value
+function toggleStyle() {
+  for (let i = 0; i < valueLists.length; i++) {
+    let propertyValues = valueLists[i].querySelectorAll('input');
+    propertyValues.forEach(item => item.addEventListener('change', setPropertyValue));
+  }
+}
+assignStuff();
+
