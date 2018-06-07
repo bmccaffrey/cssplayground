@@ -12,6 +12,10 @@ var gridProperties = grid.nextElementSibling;
 
 var display = document.querySelector('.display');
 
+var inputNumber = document.querySelector('input[type="number"]');
+
+// var submitButton = document.querySelector('input[type="submit"]');
+
 subtitle.addEventListener('click', hideNotSubtitle);
 
 function hideNotSubtitle() {
@@ -40,7 +44,36 @@ function toggleProperties() {
   this.nextElementSibling.classList.toggle('hidden');
 }
 
+function createBlock() {
+  let newBox = document.createElement('div');
+  newBox.classList.add('display__block');
+  display.append(newBox);
+}
+
+function reset() {
+  while (display.childElementCount > 0) {
+    display.lastElementChild.remove();
+  }
+}
+
+function pullNumber() {
+  if (display.childElementCount > 0) {
+    reset();
+  }
+  for (let i = 0; i < inputNumber.value; i++) {
+      createBlock();
+    }
+}
+
+// submitButton.addEventListener('click', pullNumber);
+
+inputNumber.addEventListener('change', pullNumber);
+
+
+
+
 var displayFlex = flexProperties.firstElementChild.firstElementChild;
-// if (displayFlex.checked) {add .flex to screen}
-console.log(displayFlex);
+
+// jusst add an eventListener to it
+// if (displayFlex.checked) { console.log(displayFlex); }
 
