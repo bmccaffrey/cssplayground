@@ -73,3 +73,22 @@ inputNumber.addEventListener('change', pullNumber);
 
 displayFlex.addEventListener('change', function() { display.classList.toggle('display--flex') });
 
+// radios respond to .checked
+//  function that takes the var.name (flex-direction) 
+var row = document.getElementById('row');
+var reverseRow = document.getElementById('row-reverse');
+var column = document.getElementById('column');
+var reverseColumn = document.getElementById('column-reverse');
+
+function propertyValue() {
+  let propVal = `${this.name}: ${this.id};`;
+  console.log(propVal);
+  display.style.cssText = propVal;
+}
+// probably don't have to define and add eventListeners to all of these manually
+// I could just grab styles-menu__property-value-list and then specify the 
+// input tags on them
+row.addEventListener('change', propertyValue);
+reverseRow.addEventListener('change', propertyValue);
+column.addEventListener('change', propertyValue);
+reverseColumn.addEventListener('change', propertyValue);
