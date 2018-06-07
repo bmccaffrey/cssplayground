@@ -92,3 +92,11 @@ row.addEventListener('change', propertyValue);
 reverseRow.addEventListener('change', propertyValue);
 column.addEventListener('change', propertyValue);
 reverseColumn.addEventListener('change', propertyValue);
+
+var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
+// valueLists[0].previousElementSibling.addEventListener('click',function(){ valueLists[0].classList.toggle('hidden')});
+
+valueLists.forEach(list => list.previousElementSibling
+  .addEventListener('click', function() {
+    list.classList.toggle('hidden')
+  }));
