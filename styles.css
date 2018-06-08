@@ -16,6 +16,7 @@ header {
   font-size: 2em;
   color: white;
   padding: 5px;
+  border-radius: 15px;
 }
 
 .container__main {
@@ -49,6 +50,9 @@ header {
   text-indent: 10%;
   margin-top: 0;
 }
+
+.styles-menu__item--big{}
+
 .styles-menu__item:hover {
   color: cornflowerblue;
 }
@@ -65,9 +69,6 @@ header {
 
 .styles-menu__property-value-list {
   font-size: 22pt;
-  display: block;
-}
-.label {
   display: block;
 }
 
