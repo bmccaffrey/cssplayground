@@ -91,6 +91,7 @@ hr {
   font-size: 5em;
   height: 75vh;
   width: 50vw;
+  border-radius: 15px;
   text-align: center;
   margin-top: 15px;
 }
