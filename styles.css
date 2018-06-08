@@ -7,6 +7,7 @@ html {
 body {
   background-color: #fff;
   margin: 0;
+  height: 100vh;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
 
 .styles-menu {
   background-color: #BDBDBD;
-  height: 90vh;
+  height: 75vh;
   margin: 15px 0 0 15px;
   border-radius: 12px;
 }
@@ -88,7 +89,7 @@ hr {
   background-color: #F2F2F2;
   color: orange;
   font-size: 5em;
-  height: 90vh;
+  height: 75vh;
   text-align: center;
 }
 
