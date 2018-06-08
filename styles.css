@@ -57,7 +57,7 @@ hr {
 .styles-menu__item {
   font-size: 16pt;
   text-indent: 10%;
-  margin-top: 0;
+  margin: 0;
 }
 
 .styles-menu__item--big{
