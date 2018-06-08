@@ -31,7 +31,6 @@
             </li>
 
             <li class="styles-menu__property">flex-direction</li>
-
             <div class="styles-menu__property-value-list hidden">
               <label for="">row</label>
               <input type="radio" id="row" name="flex-direction">
@@ -47,7 +46,6 @@
             </div>
 
             <li class="styles-menu__property">justify-content</li>
-            
             <div class="styles-menu__property-value-list hidden">
               <label for="">flex-start</label>
               <input type="radio" name="justify-content" id="flex-start">
@@ -71,42 +69,67 @@
               <input type="radio" name="justify-content" id="stretch">
             </div>
 
-            <li class="styles-menu__property ">align-items</li>
-
+            <li class="styles-menu__property">align-items</li>
             <div class="styles-menu__property-value-list hidden">
               <label for="">stretch</label>
               <input type="radio" name="align-items" id="stretch">
               <br>
 
               <label for="">center</label>
-            <input type="radio" name="align-items" id="center">
-            <br>
+              <input type="radio" name="align-items" id="center">
+              <br>
 
-            <label for="">flex-start</label>
-            <input type="radio" name="align-items" id="flex-start">
-            <br>
+              <label for="">flex-start</label>
+              <input type="radio" name="align-items" id="flex-start">
+              <br>
 
-            <label for="">flex-end</label>
-            <input type="radio" name="align-items" id="flex-end">
-            <br>
-            <label for="">baseline</label>
-            <input type="radio" name="align-items" id="baseline">
-            <br>
-            <label for="">last baseline</label>
-            <input type="radio" name="align-items" id="last baseline">
-            <br>
-          </div>
-          
+              <label for="">flex-end</label>
+              <input type="radio" name="align-items" id="flex-end">
+              <br>
+              <label for="">baseline</label>
+              <input type="radio" name="align-items" id="baseline">
+              <br>
+              <label for="">last baseline</label>
+              <input type="radio" name="align-items" id="last">
+              <br>
+            </div>
+
+            <!-- needs to be able to specify which block -->
             <li class="styles-menu__property">align-self</li>
+            <div class="styles-menu__property-value-list hidden">
+              <p>Can be applied to multiple individual elements</p>
+              <label for="">Apply to which block?</label>
+              <input type="number" name="align-self" id="boxNumber">
+              <label for="">stretch</label>
+              <input type="radio" name="align-self" id="stretch">
+              <br>
+              <label for="">center</label>
+              <input type="radio" name="align-self" id="center">
+              <br>
+              <label for="">start</label>
+              <input type="radio" name="align-self" id="start">
+              <br>
+              <label for="">end</label>
+              <input type="radio" name="align-self" id="end">
+            </div>
+
             <li class="styles-menu__property">flex-grow</li>
             <li class="styles-menu__property">flex-shrink</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">flex-basis</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">+ min-width</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">+ max-width</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">vertical flex-basis</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">order</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">flex-wrap</li>
+            <div class="styles-menu__property-value-list hidden"></div>
             <li class="styles-menu__property">align-content</li>
+            <div class="styles-menu__property-value-list hidden"></div>
           </ul>
           <p class="styles-menu__item hidden">Grid</p>
           <ul class="styles-menu__properties-list hidden">
