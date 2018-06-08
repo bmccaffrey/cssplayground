@@ -31,6 +31,7 @@ header {
   background-color: #BDBDBD;
   height: 90vh;
   margin: 15px 0 0 15px;
+  border-radius: 12px;
 }
 
 .styles-menu__title{
