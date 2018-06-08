@@ -60,7 +60,9 @@ hr {
   margin-top: 0;
 }
 
-.styles-menu__item--big{}
+.styles-menu__item--big{
+  font-size: 32pt;
+}
 
 .styles-menu__item:hover {
   color: cornflowerblue;
