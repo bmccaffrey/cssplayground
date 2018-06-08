@@ -30,6 +30,7 @@ flex.addEventListener('click', hideNotFlex);
 function hideNotFlex() {
   subtitle.classList.toggle('hidden');
   grid.classList.toggle('hidden');
+  this.classList.toggle('styles-menu__item--big');
 }
 
 grid.addEventListener('click', hideNotGrid);
@@ -37,6 +38,7 @@ grid.addEventListener('click', hideNotGrid);
 function hideNotGrid() {
   subtitle.classList.toggle('hidden');
   flex.classList.toggle('hidden');
+  this.classList.toggle('styles-menu__item--big');
 }
 
 flex.addEventListener('click', toggleProperties);
