@@ -40,6 +40,10 @@ header {
   text-align: center;
 }
 
+hr {
+  margin-top: 0px;
+}
+
 .styles-menu__subtitle {
   font-size: 32pt;
   text-indent: 5%;
