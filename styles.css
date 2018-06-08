@@ -30,6 +30,7 @@ header {
 .styles-menu {
   background-color: #BDBDBD;
   height: 90vh;
+  margin: 15px 0 0 15px;
 }
 
 .styles-menu__title{
