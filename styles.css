@@ -33,6 +33,7 @@ header {
   height: 75vh;
   margin: 15px 0 0 15px;
   border-radius: 12px;
+  overflow: auto;
 }
 
 .styles-menu__title{
