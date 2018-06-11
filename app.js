@@ -5,10 +5,10 @@ var subtitle = document.querySelector('.styles-menu__subtitle');
 var menuItems = document.querySelectorAll('.styles-menu__item');
 
 var flex = menuItems[0];
-var flexProperties = flex.nextElementSibling;
+var flexPropertiesList = flex.nextElementSibling;
 
 var grid = menuItems[1];;
-var gridProperties = grid.nextElementSibling;
+var gridPropertiesList = grid.nextElementSibling;
 
 var display = document.querySelector('.display');
 
@@ -79,7 +79,7 @@ displayFlex.addEventListener('change', function() { display.classList.toggle('di
 
 //  Hide Property Value Lists
 var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
-
+// Attaches Event Listener to Previous Element Sibling || Property
 valueLists.forEach(list => list.previousElementSibling
   .addEventListener('click', function() {
     list.classList.toggle('hidden')
