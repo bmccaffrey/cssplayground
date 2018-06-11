@@ -70,10 +70,11 @@ hr {
 }
 
 .styles-menu__properties-list {
-  font-size: 16pt;
   margin: 0;
 }
-.styles-menu__property {}
+.styles-menu__property {
+  font-size: 12pt;
+}
 
 .styles-menu__property:hover {
   color: cornflowerblue;
