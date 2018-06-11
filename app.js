@@ -71,10 +71,15 @@ function toggleStyle() {
 }
 
 subtitle.addEventListener('click', () => hide(flex, grid));
+
 flex.addEventListener('click', () => hide(subtitle, grid));
 flex.addEventListener('click', () => hide(flexPropertiesList));
+flex.addEventListener('click', () => addClass(flex, 'styles-menu__item--big'));
+
 grid.addEventListener('click', () => hide(subtitle, flex));
 grid.addEventListener('click', () => hide(gridPropertiesList));
+grid.addEventListener('click', () => addClass(grid, 'styles-menu__item--big'));
+
 inputNumber.addEventListener('change', pullNumber);
 displayFlex.addEventListener('change', function() {display.classList.toggle('display--flex');});
 //  Hide Property Value Lists
