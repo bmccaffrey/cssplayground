@@ -7,11 +7,13 @@ var menuItems = document.querySelectorAll('.styles-menu__item');
 var flex = menuItems[0];
 
 var grid = menuItems[1];
-
+// might redefine as document.querySelectorAll('.styles-menu__properties-list')[0];
 var flexPropertiesList = flex.nextElementSibling;
-
+// same
 var gridPropertiesList = grid.nextElementSibling;
-
+// all of the properties from both PropertiesList
+var properties = document.querySelectorAll('.styles-menu__property');
+// list of possible values; hidden under individual properties
 var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
 
 var display = document.querySelector('.display');
@@ -79,6 +81,9 @@ flex.addEventListener('click', () => addClass(flex, 'styles-menu__item--big'));
 grid.addEventListener('click', () => hide(subtitle, flex));
 grid.addEventListener('click', () => hide(gridPropertiesList));
 grid.addEventListener('click', () => addClass(grid, 'styles-menu__item--big'));
+
+// might need to add a test to see if it has the proper .nES
+properties.forEach(prop => prop.addEventListener('click', () => addClass(prop, 'style-menu__property--big')));
 
 inputNumber.addEventListener('change', pullNumber);
 displayFlex.addEventListener('change', () => addClass(display, 'display--flex'));
