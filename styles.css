@@ -116,12 +116,33 @@ hr {
   border-radius: 15px;
 }
 .red {
-  background-color: red;
+  background-color: #FF2400;
 }
+.darkred {
+  background-color: orangered;
+}
+.darkerred {
+  background-color: #DC0000;
+}
+
 .blue{
   background-color: cornflowerblue;
 }
+.darkblue {
+  background-color: dodgerblue;
+}
+.darkerblue{
+  background-color: darkblue;
+}
+
 .green {
   background-color: green;
 }
-
+.darkgreen {
+  background-color: #649500;
+}
+.darkergreen {
+  /* background-color: #243600; */
+  /* background-color: #228b22; */
+  background-color: #0d3b02;
+}
