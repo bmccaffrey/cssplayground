@@ -69,8 +69,6 @@ function pullNumber() {
     }
 }
 
-// submitButton.addEventListener('click', pullNumber);
-
 inputNumber.addEventListener('change', pullNumber);
 
 displayFlex.addEventListener('change', function() { display.classList.toggle('display--flex') });
