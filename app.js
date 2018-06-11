@@ -20,14 +20,10 @@ var inputNumber = document.querySelector('input[type="number"]');
 
 var displayFlex = document.getElementById('displayFlex');
 
-subtitle.addEventListener('click', hideNotSubtitle);
-
 function hideNotSubtitle() {
   flex.classList.toggle('hidden');
   grid.classList.toggle('hidden');
 }
-
-flex.addEventListener('click', hideNotFlex);
 
 function hideNotFlex() {
   subtitle.classList.toggle('hidden');
@@ -35,16 +31,12 @@ function hideNotFlex() {
   this.classList.toggle('styles-menu__item--big');
 }
 
-grid.addEventListener('click', hideNotGrid);
-
 function hideNotGrid() {
   subtitle.classList.toggle('hidden');
   flex.classList.toggle('hidden');
   this.classList.toggle('styles-menu__item--big');
 }
 
-flex.addEventListener('click', toggleProperties);
-grid.addEventListener('click', toggleProperties);
 
 function toggleProperties() {
   this.nextElementSibling.classList.toggle('hidden');
@@ -71,21 +63,6 @@ function pullNumber() {
   }
 }
 
-inputNumber.addEventListener('change', pullNumber);
-
-displayFlex.addEventListener('change', function() {
-  display.classList.toggle('display--flex');
-});
-
-
-
-//  Hide Property Value Lists
-// Attaches Event Listener to Previous Element Sibling || Property
-valueLists.forEach(list => list.previousElementSibling
-  .addEventListener('click', function() {
-    list.classList.toggle('hidden');
-  }));
-  
 //  Pull Property Name & Value and Set for Display
 function setPropertyValue() {
   let propVal = `${this.name}: ${this.id};`;
@@ -104,4 +81,14 @@ function toggleStyle() {
   }
 }
 
-toggleStyle();  
+subtitle.addEventListener('click', hideNotSubtitle);
+flex.addEventListener('click', hideNotFlex);
+grid.addEventListener('click', hideNotGrid);
+flex.addEventListener('click', toggleProperties);
+grid.addEventListener('click', toggleProperties);
+inputNumber.addEventListener('change', pullNumber);
+displayFlex.addEventListener('change', function() {display.classList.toggle('display--flex');});
+//  Hide Property Value Lists
+// Attaches Event Listener to Previous Element Sibling || Property
+valueLists.forEach(list => list.previousElementSibling.addEventListener('click', function() {list.classList.toggle('hidden');}));
+toggleStyle();
