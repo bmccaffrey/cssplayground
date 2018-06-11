@@ -74,6 +74,7 @@ hr {
 }
 .styles-menu__property {
   font-size: 12pt;
+  font-family: monospace;
 }
 
 .styles-menu__property:hover {
