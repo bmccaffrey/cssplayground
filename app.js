@@ -81,8 +81,8 @@ grid.addEventListener('click', () => hide(gridPropertiesList));
 grid.addEventListener('click', () => addClass(grid, 'styles-menu__item--big'));
 
 inputNumber.addEventListener('change', pullNumber);
-displayFlex.addEventListener('change', function() {display.classList.toggle('display--flex');});
+displayFlex.addEventListener('change', () => addClass(display, 'display--flex'));
 //  Hide Property Value Lists
 // Attaches Event Listener to Previous Element Sibling || Property
-valueLists.forEach(list => list.previousElementSibling.addEventListener('click', function() {list.classList.toggle('hidden');}));
+valueLists.forEach(list => list.previousElementSibling.addEventListener('click', () => addClass(list, 'hidden')));
 toggleStyle();
