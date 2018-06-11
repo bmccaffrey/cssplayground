@@ -5,18 +5,20 @@ var subtitle = document.querySelector('.styles-menu__subtitle');
 var menuItems = document.querySelectorAll('.styles-menu__item');
 
 var flex = menuItems[0];
+
 var flexPropertiesList = flex.nextElementSibling;
 
 var grid = menuItems[1];;
+
 var gridPropertiesList = grid.nextElementSibling;
 
 var display = document.querySelector('.display');
 
 var inputNumber = document.querySelector('input[type="number"]');
 
-// var submitButton = document.querySelector('input[type="submit"]');
-
 var displayFlex = document.getElementById('displayFlex');
+
+var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
 
 subtitle.addEventListener('click', hideNotSubtitle);
 
@@ -76,7 +78,6 @@ displayFlex.addEventListener('change', function() { display.classList.toggle('di
 
 
 //  Hide Property Value Lists
-var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
 // Attaches Event Listener to Previous Element Sibling || Property
 valueLists.forEach(list => list.previousElementSibling
   .addEventListener('click', function() {
