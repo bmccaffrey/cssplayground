@@ -56,7 +56,7 @@ hr {
 }
 
 .styles-menu__item {
-  font-size: 16pt;
+  font-size: 18pt;
   text-indent: 10%;
   margin: 0;
 }
@@ -82,7 +82,7 @@ hr {
 }
 
 .styles-menu__property-value-list {
-  font-size: 22pt;
+  font-size: 12pt;
   display: block;
 }
 
