@@ -20,26 +20,11 @@ var inputNumber = document.querySelector('input[type="number"]');
 
 var displayFlex = document.getElementById('displayFlex');
 
-function hideNotSubtitle() {
-  flex.classList.toggle('hidden');
-  grid.classList.toggle('hidden');
-}
-
-function hideNotFlex() {
-  subtitle.classList.toggle('hidden');
-  grid.classList.toggle('hidden');
-  this.classList.toggle('styles-menu__item--big');
-}
-
-function hideNotGrid() {
-  subtitle.classList.toggle('hidden');
-  flex.classList.toggle('hidden');
-  this.classList.toggle('styles-menu__item--big');
-}
-
-
-function toggleProperties() {
-  this.nextElementSibling.classList.toggle('hidden');
+function hide(elm1, /* optional */ elm2) {
+  elm1.classList.toggle('hidden');
+  if (elm2) {
+    elm2.classList.toggle('hidden');
+  }
 }
 
 function createBlock() {
@@ -81,11 +66,11 @@ function toggleStyle() {
   }
 }
 
-subtitle.addEventListener('click', hideNotSubtitle);
-flex.addEventListener('click', hideNotFlex);
-grid.addEventListener('click', hideNotGrid);
-flex.addEventListener('click', toggleProperties);
-grid.addEventListener('click', toggleProperties);
+subtitle.addEventListener('click', () => hide(flex, grid));
+flex.addEventListener('click', () => hide(subtitle, grid));
+flex.addEventListener('click', () => hide(flexPropertiesList));
+grid.addEventListener('click', () => hide(subtitle, flex));
+grid.addEventListener('click', () => hide(gridPropertiesList));
 inputNumber.addEventListener('change', pullNumber);
 displayFlex.addEventListener('change', function() {display.classList.toggle('display--flex');});
 //  Hide Property Value Lists
