@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var subtitle = document.querySelector('.styles-menu__subtitle');
 
@@ -6,19 +6,19 @@ var menuItems = document.querySelectorAll('.styles-menu__item');
 
 var flex = menuItems[0];
 
+var grid = menuItems[1];
+
 var flexPropertiesList = flex.nextElementSibling;
 
-var grid = menuItems[1];;
-
 var gridPropertiesList = grid.nextElementSibling;
+
+var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
 
 var display = document.querySelector('.display');
 
 var inputNumber = document.querySelector('input[type="number"]');
 
 var displayFlex = document.getElementById('displayFlex');
-
-var valueLists = document.querySelectorAll('.styles-menu__property-value-list');
 
 subtitle.addEventListener('click', hideNotSubtitle);
 
@@ -67,13 +67,15 @@ function pullNumber() {
     reset();
   }
   for (let i = 0; i < inputNumber.value; i++) {
-      createBlock();
-    }
+    createBlock();
+  }
 }
 
 inputNumber.addEventListener('change', pullNumber);
 
-displayFlex.addEventListener('change', function() { display.classList.toggle('display--flex') });
+displayFlex.addEventListener('change', function() {
+  display.classList.toggle('display--flex');
+});
 
 
 
@@ -81,14 +83,12 @@ displayFlex.addEventListener('change', function() { display.classList.toggle('di
 // Attaches Event Listener to Previous Element Sibling || Property
 valueLists.forEach(list => list.previousElementSibling
   .addEventListener('click', function() {
-    list.classList.toggle('hidden')
+    list.classList.toggle('hidden');
   }));
   
 //  Pull Property Name & Value and Set for Display
 function setPropertyValue() {
   let propVal = `${this.name}: ${this.id};`;
-  //  remember to remove console.log statement later
-  console.log(propVal);
   if (display.style.cssText) {
     display.style.cssText += propVal;
   } else {
