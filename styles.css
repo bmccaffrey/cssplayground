@@ -77,6 +77,10 @@ hr {
   font-family: monospace;
 }
 
+.style-menu__property--big {
+  font-size: 18pt;
+}
+
 .styles-menu__property:hover {
   color: cornflowerblue;
 }
