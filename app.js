@@ -27,6 +27,10 @@ function hide(elm1, /* optional */ elm2) {
   }
 }
 
+function addClass(elm, className) {
+  elm.classList.toggle(className);
+}
+
 function createBlock() {
   let newBox = document.createElement('div');
   newBox.classList.add('display__block');
