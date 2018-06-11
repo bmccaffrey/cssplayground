@@ -96,6 +96,11 @@ hr {
   color: #ff9b00;
 }
 
+.style-menu__property-intro {
+  margin: 0 0 5px 0;
+  text-decoration: underline;
+}
+
 .styles-menu__property-value-list {
   font-size: 12pt;
   display: block;
