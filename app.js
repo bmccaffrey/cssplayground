@@ -94,7 +94,7 @@ function toggleStyle() {
   }
 }
 
-function stuff(nodeList) {
+function setIndividualProperties(nodeList) {
   var properties = Array.from(nodeList);
   properties.shift();
   properties.forEach( prop => prop.addEventListener('change', function() {
@@ -129,6 +129,6 @@ boxNumbers.forEach(boxNumber => boxNumber.addEventListener('input', function() {
   target = blocks[this.valueAsNumber -1];
 }));
 
-individualProperties.forEach(prop => stuff(document.querySelectorAll(`[name=${prop}]`)));
+individualProperties.forEach(prop => setIndividualProperties(document.querySelectorAll(`[name=${prop}]`)));
 
 toggleStyle();
