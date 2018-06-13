@@ -32,12 +32,16 @@ var flexGrow = document.querySelectorAll('[name="flex-grow"]');
 var flexShrink = document.querySelectorAll('[name="flex-shrink"]');
 var order = document.querySelectorAll('[name="order"]');
 
+var individualProperties = ['align-self', 'flex-grow', 'flex-shrink', 'order'];
+
+
+individualProperties.forEach(prop => stuff(document.querySelectorAll(`[name=${prop}]`)));
+
 var target = null;
 
 boxNumbers.forEach(boxNumber => boxNumber.addEventListener('input', function() {
   target = blocks[this.valueAsNumber -1];
 }));
-
 
 function stuff(nodeList) {
   var properties = Array.from(nodeList);
@@ -52,11 +56,6 @@ function stuff(nodeList) {
     else { target.style.cssText = propVal; }
   }));
 }
-stuff(alignSelf);
-stuff(flexGrow);
-stuff(flexShrink);
-stuff(flexBasis);
-stuff(order);
 
 function hide(elm1, /* optional */ elm2) {
   elm1.classList.toggle('hidden');
