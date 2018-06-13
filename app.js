@@ -28,28 +28,11 @@ var boxNumbers= document.querySelectorAll('#boxNumber');
 
 var individualProperties = ['align-self', 'flex-grow', 'flex-shrink', 'order'];
 
-
-individualProperties.forEach(prop => stuff(document.querySelectorAll(`[name=${prop}]`)));
-
 var target = null;
 
-boxNumbers.forEach(boxNumber => boxNumber.addEventListener('input', function() {
-  target = blocks[this.valueAsNumber -1];
-}));
 
-function stuff(nodeList) {
-  var properties = Array.from(nodeList);
-  properties.shift();
-  properties.forEach( prop => prop.addEventListener('change', function() {
-    if (this.id){
-      var propVal = `${this.name}: ${this.id}`;
-    } else {
-      propVal = `${this.name}: ${this.valueAsNumber}`;
-    }
-    if (target.style.cssText) { target.style.cssText += propVal; }
-    else { target.style.cssText = propVal; }
-  }));
-}
+
+
 
 function hide(elm1, /* optional */ elm2) {
   elm1.classList.toggle('hidden');
@@ -111,6 +94,18 @@ function toggleStyle() {
   }
 }
 
+function stuff(nodeList) {
+  var properties = Array.from(nodeList);
+  properties.shift();
+  properties.forEach( prop => prop.addEventListener('change', function() {
+    if (this.id) { var propVal = `${this.name}: ${this.id}`; }
+    else { propVal = `${this.name}: ${this.valueAsNumber}`; }
+    if (target.style.cssText) { target.style.cssText += propVal; }
+    else { target.style.cssText = propVal; }
+  }));
+}
+
+
 subtitle.addEventListener('click', () => hide(flex, grid));
 
 flex.addEventListener('click', () => hide(subtitle, grid));
@@ -129,4 +124,11 @@ displayFlex.addEventListener('change', () => addClass(display, 'display--flex'))
 //  Hide Property Value Lists
 // Attaches Event Listener to Previous Element Sibling || Property
 valueLists.forEach(list => list.previousElementSibling.addEventListener('click', () => addClass(list, 'hidden')));
+
+boxNumbers.forEach(boxNumber => boxNumber.addEventListener('input', function() {
+  target = blocks[this.valueAsNumber -1];
+}));
+
+individualProperties.forEach(prop => stuff(document.querySelectorAll(`[name=${prop}]`)));
+
 toggleStyle();
