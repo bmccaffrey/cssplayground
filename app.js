@@ -30,7 +30,6 @@ var boxNumbers= document.querySelectorAll('#boxNumber');
 var alignSelf = document.querySelectorAll('[name="align-self"]');
 var flexGrow = document.querySelectorAll('[name="flex-grow"]');
 var flexShrink = document.querySelectorAll('[name="flex-shrink"]');
-var flexBasis = document.querySelectorAll('[name="flex-basis"]');
 var order = document.querySelectorAll('[name="order"]');
 
 var target = null;
@@ -46,7 +45,6 @@ function stuff(nodeList) {
   properties.forEach( prop => prop.addEventListener('change', function() {
     if (this.id){
       var propVal = `${this.name}: ${this.id}`;
-      console.log(propVal);
     } else {
       propVal = `${this.name}: ${this.valueAsNumber}`;
     }
