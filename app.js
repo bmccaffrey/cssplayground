@@ -26,12 +26,6 @@ var blocks = document.querySelectorAll('.display__block');
 
 var boxNumbers= document.querySelectorAll('#boxNumber');
 
-// first index in NodeList is going to be the box number
-var alignSelf = document.querySelectorAll('[name="align-self"]');
-var flexGrow = document.querySelectorAll('[name="flex-grow"]');
-var flexShrink = document.querySelectorAll('[name="flex-shrink"]');
-var order = document.querySelectorAll('[name="order"]');
-
 var individualProperties = ['align-self', 'flex-grow', 'flex-shrink', 'order'];
 
 
