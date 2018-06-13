@@ -22,6 +22,44 @@ var inputNumber = document.querySelector('input[type="number"]');
 
 var displayFlex = document.getElementById('displayFlex');
 
+var blocks = document.querySelectorAll('.display__block');
+
+var boxNumbers= document.querySelectorAll('#boxNumber');
+
+// first index in NodeList is going to be the box number
+var alignSelf = document.querySelectorAll('[name="align-self"]');
+var flexGrow = document.querySelectorAll('[name="flex-grow"]');
+var flexShrink = document.querySelectorAll('[name="flex-shrink"]');
+var flexBasis = document.querySelectorAll('[name="flex-basis"]');
+var order = document.querySelectorAll('[name="order"]');
+
+var target = null;
+
+boxNumbers.forEach(boxNumber => boxNumber.addEventListener('input', function() {
+  target = blocks[this.valueAsNumber -1];
+}));
+
+
+function stuff(nodeList) {
+  var properties = Array.from(nodeList);
+  properties.shift();
+  properties.forEach( prop => prop.addEventListener('change', function() {
+    if (this.id){
+      var propVal = `${this.name}: ${this.id}`;
+      console.log(propVal);
+    } else {
+      propVal = `${this.name}: ${this.valueAsNumber}`;
+    }
+    if (target.style.cssText) { target.style.cssText += propVal; }
+    else { target.style.cssText = propVal; }
+  }));
+}
+stuff(alignSelf);
+stuff(flexGrow);
+stuff(flexShrink);
+stuff(flexBasis);
+stuff(order);
+
 function hide(elm1, /* optional */ elm2) {
   elm1.classList.toggle('hidden');
   if (elm2) {
@@ -54,6 +92,15 @@ function pullNumber() {
   }
 }
 
+// remove Value Lists that are applied to individual elements and not the screen
+function valueListTrim() {
+  let x = [];
+  for (let i = 0; i < 5; i++) {
+    x.push(valueLists[i]);
+  }
+  valueLists = x;
+}
+
 //  Pull Property Name & Value and Set for Display
 function setPropertyValue() {
   let propVal = `${this.name}: ${this.id};`;
@@ -66,6 +113,7 @@ function setPropertyValue() {
 
 //  Set Style Toggles for Every Property Value
 function toggleStyle() {
+  valueListTrim();
   for (let i = 0; i < valueLists.length; i++) {
     let propertyValues = valueLists[i].querySelectorAll('input');
     propertyValues.forEach(item => item.addEventListener('change', setPropertyValue));
